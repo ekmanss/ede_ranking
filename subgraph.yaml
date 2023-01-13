@@ -16,18 +16,12 @@ dataSources:
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - Liquidation
-        - ClosedPosition
-        - Summary
-        - LeaderBoardAccount
         - IncreasePosition
         - DecreasePosition
         - PositionKeyAccount
-        - Trade
-        - Position
-        - Pnl
-        - IndependentUser
-        - User
+        - Transaction
+        - Account
+        - DurationTotalVolume
       abis:
         - name: Vault
           file: ./abis/Vault.json
