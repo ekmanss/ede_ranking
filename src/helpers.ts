@@ -109,7 +109,7 @@ export function calculatePositionDeltaPercentage(delta: BigInt, collateral: BigI
 }
 
 export function accumulateIncMarginTradingVolume(accoutn: Account, sizeDelta: BigInt): void {
-    accoutn.durationAccumulatedMarginTradingVolume = BigInt.fromString(accoutn.durationAccumulatedMarginTradingVolume).plus(sizeDelta).toString()
+    accoutn.durationAccumulatedMarginTradingVolume = accoutn.durationAccumulatedMarginTradingVolume.plus(sizeDelta)
 }
 
 export function accumulatePnl(account: Account, pnl: BigInt, fee: BigInt, hasProfit: boolean): void {

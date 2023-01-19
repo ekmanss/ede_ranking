@@ -61,7 +61,7 @@ type Account @entity {
     address: String!
     duration: String!
     durationId: String!
-    durationAccumulatedMarginTradingVolume: String!
+    durationAccumulatedMarginTradingVolume: BigInt!
     durationAccumulatedMarginTradingPnl: String!
     durationAccumulatedMarginTradingRealisedPnl: String!
 

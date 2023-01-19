@@ -42,7 +42,7 @@ export function handleIncreasePosition(event: IncreasePositionEvent): void {
         accountDaily.address = event.params.account.toHexString();
         accountDaily.duration = daily;
         accountDaily.durationId = dailyId.toString();
-        accountDaily.durationAccumulatedMarginTradingVolume = "0";
+        accountDaily.durationAccumulatedMarginTradingVolume = ZERO_BI;
         accountDaily.durationAccumulatedMarginTradingPnl = "0"
         accountDaily.durationAccumulatedMarginTradingRealisedPnl = "0"
 
@@ -56,7 +56,7 @@ export function handleIncreasePosition(event: IncreasePositionEvent): void {
         accountWeekly.address = event.params.account.toHexString();
         accountWeekly.duration = weekly;
         accountWeekly.durationId = weeklyId.toString();
-        accountWeekly.durationAccumulatedMarginTradingVolume = "0";
+        accountWeekly.durationAccumulatedMarginTradingVolume = ZERO_BI;
         accountWeekly.durationAccumulatedMarginTradingPnl = "0"
         accountWeekly.durationAccumulatedMarginTradingRealisedPnl = "0"
 
@@ -99,7 +99,7 @@ export function handleDecreasePosition(event: DecreasePositionEvent): void {
         accountDaily.address = event.params.account.toHexString();
         accountDaily.duration = daily;
         accountDaily.durationId = dailyId.toString();
-        accountDaily.durationAccumulatedMarginTradingVolume = "0";
+        accountDaily.durationAccumulatedMarginTradingVolume = ZERO_BI;
         accountDaily.durationAccumulatedMarginTradingPnl = "0"
         accountDaily.durationAccumulatedMarginTradingRealisedPnl = "0"
 
@@ -112,7 +112,7 @@ export function handleDecreasePosition(event: DecreasePositionEvent): void {
         accountWeekly.address = event.params.account.toHexString();
         accountWeekly.duration = weekly;
         accountWeekly.durationId = weeklyId.toString();
-        accountWeekly.durationAccumulatedMarginTradingVolume = "0";
+        accountWeekly.durationAccumulatedMarginTradingVolume = ZERO_BI;
         accountWeekly.durationAccumulatedMarginTradingPnl = "0"
         accountWeekly.durationAccumulatedMarginTradingRealisedPnl = "0"
 
@@ -154,7 +154,7 @@ export function handleUpdatePnl(event: UpdatePnlEvent): void {
         accountDaily.address = address;
         accountDaily.duration = daily;
         accountDaily.durationId = dailyId.toString();
-        accountDaily.durationAccumulatedMarginTradingVolume = "0";
+        accountDaily.durationAccumulatedMarginTradingVolume = ZERO_BI;
         accountDaily.durationAccumulatedMarginTradingPnl = "0"
         accountDaily.durationAccumulatedMarginTradingRealisedPnl = "0"
 
@@ -166,7 +166,7 @@ export function handleUpdatePnl(event: UpdatePnlEvent): void {
         accountWeekly.address = address;
         accountWeekly.duration = weekly;
         accountWeekly.durationId = weeklyId.toString();
-        accountWeekly.durationAccumulatedMarginTradingVolume = "0";
+        accountWeekly.durationAccumulatedMarginTradingVolume = ZERO_BI;
         accountWeekly.durationAccumulatedMarginTradingPnl = "0"
         accountWeekly.durationAccumulatedMarginTradingRealisedPnl = "0"
 
@@ -201,7 +201,7 @@ export function handleClosePosition(event: ClosePositionEvent): void {
         accountDaily.address = event.params.account.toHexString();
         accountDaily.duration = daily;
         accountDaily.durationId = dailyId.toString();
-        accountDaily.durationAccumulatedMarginTradingVolume = "0";
+        accountDaily.durationAccumulatedMarginTradingVolume = ZERO_BI;
         accountDaily.durationAccumulatedMarginTradingPnl = "0"
         accountDaily.durationAccumulatedMarginTradingRealisedPnl = "0"
 
@@ -214,7 +214,7 @@ export function handleClosePosition(event: ClosePositionEvent): void {
         accountWeekly.address = event.params.account.toHexString();
         accountWeekly.duration = weekly;
         accountWeekly.durationId = weeklyId.toString();
-        accountWeekly.durationAccumulatedMarginTradingVolume = "0";
+        accountWeekly.durationAccumulatedMarginTradingVolume = ZERO_BI;
         accountWeekly.durationAccumulatedMarginTradingPnl = "0"
         accountWeekly.durationAccumulatedMarginTradingRealisedPnl = "0"
 
@@ -249,7 +249,7 @@ export function handleLiquidatePosition(event: LiquidatePositionEvent): void {
         accountDaily.address = event.params.account.toHexString();
         accountDaily.duration = daily;
         accountDaily.durationId = dailyId.toString();
-        accountDaily.durationAccumulatedMarginTradingVolume = "0";
+        accountDaily.durationAccumulatedMarginTradingVolume = ZERO_BI;
         accountDaily.durationAccumulatedMarginTradingPnl = "0"
         accountDaily.durationAccumulatedMarginTradingRealisedPnl = "0"
 
@@ -262,7 +262,7 @@ export function handleLiquidatePosition(event: LiquidatePositionEvent): void {
         accountWeekly.address = event.params.account.toHexString();
         accountWeekly.duration = weekly;
         accountWeekly.durationId = weeklyId.toString();
-        accountWeekly.durationAccumulatedMarginTradingVolume = "0";
+        accountWeekly.durationAccumulatedMarginTradingVolume = ZERO_BI;
         accountWeekly.durationAccumulatedMarginTradingPnl = "0"
         accountWeekly.durationAccumulatedMarginTradingRealisedPnl = "0"
 
