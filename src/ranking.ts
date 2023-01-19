@@ -24,7 +24,7 @@ import {
 } from "./helpers";
 
 
-export function handleIncreasePositionSingle(event: IncreasePositionEvent): void {
+export function handleIncreasePosition(event: IncreasePositionEvent): void {
     _storeOriginPkMap(event);
     accumulateDurationTotalVolume(event.params.sizeDelta, event);
     //======================volume start======================
