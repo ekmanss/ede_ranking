@@ -170,6 +170,9 @@ export function accumulateDurationTotalVolume(sizeDelta: BigInt, event: ethereum
         dailyDurationTotalVolume.totalVolume = sizeDelta.toString();
 
         dailyDurationTotalVolume.save()
+    }else{
+        dailyDurationTotalVolume.totalVolume = BigInt.fromString(dailyDurationTotalVolume.totalVolume).plus(sizeDelta).toString();
+
     }
 
     if (weeklyDurationTotalVolume === null) {
@@ -179,11 +182,12 @@ export function accumulateDurationTotalVolume(sizeDelta: BigInt, event: ethereum
         weeklyDurationTotalVolume.totalVolume = sizeDelta.toString();
 
         weeklyDurationTotalVolume.save()
+    }else{
+        weeklyDurationTotalVolume.totalVolume = BigInt.fromString(weeklyDurationTotalVolume.totalVolume).plus(sizeDelta).toString();
+
     }
 
 
-    dailyDurationTotalVolume.totalVolume = BigInt.fromString(dailyDurationTotalVolume.totalVolume).plus(sizeDelta).toString();
-    weeklyDurationTotalVolume.totalVolume = BigInt.fromString(weeklyDurationTotalVolume.totalVolume).plus(sizeDelta).toString();
 
     dailyDurationTotalVolume.save();
     weeklyDurationTotalVolume.save();
