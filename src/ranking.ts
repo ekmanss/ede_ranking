@@ -47,7 +47,8 @@ export function handleIncreasePositionSingle(event: IncreasePositionEvent): void
         accountDaily.durationAccumulatedMarginTradingRealisedPnl = "0"
 
         accumulateIncMarginTradingVolume(accountDaily, event.params.sizeDelta);
-        accountDaily.save();
+    }else{
+        accumulateIncMarginTradingVolume(accountDaily, event.params.sizeDelta);
     }
 
     if (accountWeekly === null) {
@@ -60,11 +61,12 @@ export function handleIncreasePositionSingle(event: IncreasePositionEvent): void
         accountWeekly.durationAccumulatedMarginTradingRealisedPnl = "0"
 
         accumulateIncMarginTradingVolume(accountWeekly, event.params.sizeDelta);
-        accountWeekly.save();
+    }else {
+        accumulateIncMarginTradingVolume(accountWeekly, event.params.sizeDelta);
     }
 
-    accumulateIncMarginTradingVolume(accountDaily, event.params.sizeDelta);
-    accumulateIncMarginTradingVolume(accountWeekly, event.params.sizeDelta);
+
+
 
     //======================volume end======================
 
