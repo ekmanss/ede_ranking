@@ -1,0 +1,39 @@
+specVersion: 0.0.4
+description: ERC20 for Ethereum
+repository: https://github.com/armatrix/bsc-subgraph
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Vault
+    network: Binance
+    source:
+      address: "0x9fc28bfa5D88470c52340Ae225bc2b7DF3c4FcD0"
+      abi: Vault
+      startBlock: 26308492
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - IncreasePosition
+        - DecreasePosition
+        - PositionKeyAccount
+        - Transaction
+        - Account
+        - DurationTotalVolume
+      abis:
+        - name: Vault
+          file: ./abis/Vault.json
+      eventHandlers:
+        - event: LiquidatePosition(bytes32,address,address,address,bool,uint256,uint256,uint256,int256,uint256)
+          handler: handleLiquidatePosition
+        - event: IncreasePosition(bytes32,address,address,address,uint256,uint256,bool,uint256,uint256)
+          handler: handleIncreasePosition
+        - event: ClosePosition(bytes32,address,uint256,uint256,uint256,uint256,uint256,int256)
+          handler: handleClosePosition
+        - event: DecreasePosition(bytes32,address,address,address,uint256,uint256,bool,uint256,uint256,uint256,uint256,uint256)
+          handler: handleDecreasePosition
+        - event: UpdatePnl(bytes32,bool,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdatePnl
+      file: ./src/ranking.ts
