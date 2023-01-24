@@ -9,7 +9,8 @@
     "remove-local": "graph remove --node http://127.0.0.1:8020/ ede_ranking",
     "deploy-local": "graph deploy --node http://127.0.0.1:8020/ --ipfs http://127.0.0.1:5001 ede_ranking subgraph.local.yaml",
     "deploy-demo": "graph deploy ede_ranking subgraph.dockerParity.yaml --debug --node http://127.0.0.1:8020/ --ipfs http://127.0.0.1:5001",
-    "deploy:bsctest": "graph deploy balancer-labs/balancer-kovan-v2 subgraph.bsctest.yaml --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/"
+    "deploy:bsctest": "graph deploy balancer-labs/balancer-kovan-v2 subgraph.bsctest.yaml --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
+    "deploy:bsc": ""
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.30.4",
