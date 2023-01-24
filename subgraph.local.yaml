@@ -37,3 +37,36 @@ dataSources:
         - event: UpdatePnl(bytes32,bool,uint256,uint256,uint256,uint256,uint256)
           handler: handleUpdatePnl
       file: ./src/ranking.ts
+  - kind: ethereum/contract
+    name: Vault_elp2
+    network: Binance
+    source:
+      address: "0xC6600B382306CAb8FabF1118801Bd38c3c1Cb641"
+      abi: Vault
+      startBlock: 26308632
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - IncreasePosition
+        - DecreasePosition
+        - PositionKeyAccount
+        - Transaction
+        - Account
+        - DurationTotalVolume
+      abis:
+        - name: Vault
+          file: ./abis/Vault.json
+      eventHandlers:
+        - event: LiquidatePosition(bytes32,address,address,address,bool,uint256,uint256,uint256,int256,uint256)
+          handler: handleLiquidatePosition
+        - event: IncreasePosition(bytes32,address,address,address,uint256,uint256,bool,uint256,uint256)
+          handler: handleIncreasePosition
+        - event: ClosePosition(bytes32,address,uint256,uint256,uint256,uint256,uint256,int256)
+          handler: handleClosePosition
+        - event: DecreasePosition(bytes32,address,address,address,uint256,uint256,bool,uint256,uint256,uint256,uint256,uint256)
+          handler: handleDecreasePosition
+        - event: UpdatePnl(bytes32,bool,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdatePnl
+      file: ./src/ranking.ts
